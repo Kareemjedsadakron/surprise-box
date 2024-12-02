@@ -1,0 +1,321 @@
+/* General Styling */
+body {
+  margin: 0;
+  font-family: "Arial", sans-serif;
+  background: linear-gradient(135deg, #fbc2eb, #a6c1ee);
+  color: #333;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+  overflow-x: hidden;
+}
+
+.container {
+  width: 100%;
+  padding: 10px;
+  box-sizing: border-box;
+}
+
+.home-container {
+  text-align: center;
+  padding: 20px;
+  max-width: 500px;
+  width: 100%;
+  position: relative;
+  transition: background 0.3s ease;
+  box-sizing: border-box;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: center;
+}
+
+/* Title Styling */
+.title {
+  font-size: 43px;
+  font-weight: bold;
+  color: #4facfe;
+  margin-bottom: 20px;
+  animation: fadeIn 2s ease-in-out, glowing 3s infinite alternate, bounce 2s infinite;
+  text-align: center;
+  word-wrap: break-word;
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: scale(0.9);
+  }
+  to {
+    opacity: 1;
+    transform: scale(1);
+  }
+}
+
+/* Subtitle Styling */
+.subtitle {
+  font-size: 24px;
+  font-weight: 500;
+  color: #4facfe;
+  margin-bottom: 10px;
+  animation: floatAnimation 3s ease-in-out infinite;
+  padding: 0 10px; /* Spacing for mobile responsiveness */
+}
+
+/* Date Styling */
+.date {
+  font-size: 20px;
+  color: #555;
+  margin-bottom: 15px;
+}
+
+/* Image Slider */
+.gallery-slider {
+  margin: 20px 0;
+  width: 100%;
+  max-width: 400px;
+  text-align: center;
+}
+
+.slider-item {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.slider-image {
+  width: 100%;
+  max-height: 300px;
+  border-radius: 20px;
+  object-fit: cover;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
+}
+
+/* Video Slider */
+.video-slider {
+  margin-top: 20px;
+  width: 100%;
+  max-width: 500px;
+}
+
+.slider-video {
+  width: 100%;
+  max-height: 300px;
+  border-radius: 15px;
+  object-fit: cover;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
+}
+
+/* Message Styling */
+.message {
+  font-size: 18px;
+  margin-bottom: 20px;
+  color: #333;
+  word-wrap: break-word;
+  padding: 0 10px;
+}
+
+/* ReactPlayer Styling */
+.youtube-player {
+  margin-bottom: 15px;
+  border-radius: 10px;
+  overflow: hidden;
+  box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.2);
+  width: 100%;
+  max-width: 400px;
+}
+
+/* Password Form */
+.password-form {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.password-label {
+  font-size: 16px;
+  margin-bottom: 20px;
+}
+
+.password-circles {
+  display: flex;
+  justify-content: center;
+  gap: 10px;
+  margin-bottom: 15px;
+}
+
+.circle {
+  width: 20px;
+  height: 20px;
+  border: 2px solid #ffa5a5;
+  border-radius: 50%;
+  background-color: #fff;
+}
+
+.circle.filled {
+  background-color: #ff6b6b;
+}
+
+.password-input {
+  position: absolute;
+  opacity: 0;
+  pointer-events: none;
+  height: 0;
+}
+
+.submit-button {
+  padding: 10px 20px;
+  font-size: 16px;
+  color: #fff;
+  background-color: #ff6b6b;
+  border: none;
+  border-radius: 20px;
+  cursor: pointer;
+  transition: background 0.3s;
+}
+
+.submit-button:hover {
+  background-color: #e04848;
+}
+
+/* Gift Section */
+.gift-section {
+  margin-top: 20px;
+  position: relative;
+  padding: 10px; /* Added padding for spacing */
+}
+
+.gift-message {
+  font-size: 18px;
+  margin-bottom: 15px;
+  color: #ff6b6b;
+}
+
+.gift-box {
+  cursor: pointer;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  position: relative;
+  padding: 10px; /* Ensure spacing for smaller screens */
+}
+
+.gift-gif {
+  width: 150px;
+  height: auto;
+  transition: transform 0.3s;
+}
+
+.gift-gif:hover {
+  transform: scale(1.1);
+}
+
+.gift-text {
+  margin-top: 10px;
+  font-size: 16px;
+  color: #ff6b6b;
+  font-weight: bold;
+}
+
+/* Fireworks Styling for Gift Box */
+.gift-box.fireworks-background {
+  position: relative;
+  background: url("/images/Gif/gp02.gif") center/cover no-repeat;
+  border-radius: 15px;
+  padding: 15px; /* Add space inside the box */
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
+  animation: fadeIn 1s ease-in-out;
+}
+
+/* Keyframes for floating animation */
+@keyframes floatAnimation {
+  0% {
+    transform: translateY(0);
+  }
+  50% {
+    transform: translateY(-10px);
+  }
+  100% {
+    transform: translateY(0);
+  }
+}
+
+/* Keyframes for glowing animation */
+@keyframes glowing {
+  0% {
+    text-shadow: 0 0 5px #89cff0, 0 0 10px #89cff0, 0 0 15px #89cff0;
+  }
+  50% {
+    text-shadow: 0 0 10px #4facfe, 0 0 20px #4facfe, 0 0 25px #4facfe;
+  }
+  100% {
+    text-shadow: 0 0 5px #89cff0, 0 0 10px #89cff0, 0 0 15px #89cff0;
+  }
+}
+
+/* Keyframes for bounce animation */
+@keyframes bounce {
+  0%, 100% {
+    transform: translateY(0);
+  }
+  50% {
+    transform: translateY(-10px);
+  }
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+  .container {
+    padding: 15px; /* Extra spacing for small screens */
+  }
+
+  .home-container {
+    padding: 15px;
+    width: 100%;
+  }
+
+  .title {
+    font-size: 32px; /* Adjust font size for smaller screens */
+  }
+
+  .subtitle {
+    font-size: 18px; /* Smaller font size for readability */
+    padding: 0 10px;
+  }
+
+  .youtube-player {
+    width: 100%;
+  }
+
+  .gallery-slider {
+    max-width: 100%;
+  }
+
+  .slider-image {
+    max-height: 250px;
+  }
+
+  .slider-video {
+    max-height: 300px;
+    width: 100%;
+  }
+
+  .message {
+    padding: 0 10px;
+  }
+
+  .gift-section {
+    padding: 10px;
+  }
+}
+
+/* Subtitle Styling */
+.rr-text {
+  font-size: 18px;
+  font-weight: 500;
+  color: #4facfe;
+  margin-bottom: 10px;
+  animation: floatAnimation 3s ease-in-out infinite;
+}
